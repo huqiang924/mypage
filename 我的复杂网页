@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的复杂网页</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- 登录页面 -->
+    <div id="login-form" class="form-container">
+        <h2>登录</h2>
+        <form id="login" method="POST">
+            <label for="username">用户名</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">密码</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">登录</button>
+        </form>
+        <p>还没有账号？ <a href="#" onclick="switchToRegister()">注册</a></p>
+    </div>
+
+    <!-- 注册页面 -->
+    <div id="register-form" class="form-container" style="display:none;">
+        <h2>注册</h2>
+        <form id="register" method="POST">
+            <label for="new-username">用户名</label>
+            <input type="text" id="new-username" name="username" required>
+            <label for="new-password">密码</label>
+            <input type="password" id="new-password" name="password" required>
+            <button type="submit">注册</button>
+        </form>
+        <p>已有账号？ <a href="#" onclick="switchToLogin()">登录</a></p>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
